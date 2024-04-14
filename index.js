@@ -120,7 +120,7 @@ app.get('/api/top10tickers', async (req, res) => {
 
 app.get('/api/dbtickers',async(req,res)=>{
   try{
-    await save();
+    // await save();
     const data=await getFromMongo();
     if(!data){
       res.status(500).json({ error: 'Failed to fetch data from database' });
